@@ -1,0 +1,100 @@
+.internal_wrapper {
+	margin-top: 130px;
+	width: 100%;
+
+	h1 {
+		@media only screen and (max-width: $md-breakpoint) {
+			text-align: center;
+			font-size: 50px;
+		}
+	}
+
+	.request-btn {
+		bottom: 20px;
+		position: fixed;
+		right: 20px;
+		z-index: 10;
+
+		&:hover {
+			color: $white;
+			text-decoration: none;
+			transform: scale(1.1, 1.1);
+			transition: .3s all ease-out;
+		}
+
+		@media only screen and (max-width: $lg-breakpoint) {
+			bottom: 0;
+			right: 0;
+			width: 100%;
+		}
+	}
+
+	.vivid-simple-accordion {
+
+		.panel-title {
+			color: $black;
+			text-align: left;
+		}
+	}
+
+	#wufoo-rym6gs01415odx {
+		border: 1px solid $red;
+		padding: 40px;
+	}
+
+	.products-wrapper {
+		width: 600px;
+
+		.product-box {
+			position: relative;
+		}
+		.wordcloud {
+			position: absolute;
+			color: $gray;
+			font-family: $secondary-font;
+			font-size: 2em;
+			text-transform: uppercase;
+			transform: rotate(90deg);
+			transform-origin: 50% 50%;
+			left: 500px;
+			top: 150px;
+
+			p {
+				font-size: 1.1em;
+				line-height: 1em;
+			}
+		}
+	}
+
+	.professional-services {
+
+		.hero {
+			background: url('../img/expert-implementation-bg.png');
+		}
+
+		h2 {
+			text-align: left;
+		}
+
+		.experience-value {
+			color: $white;
+			background: $red;
+
+			p {
+				font-weight: 600;
+			}
+			img {
+				position: absolute;
+				left: 0;
+				width: 100%;
+			}
+		}
+
+		.support {
+			background: url('../img/support-bg.png') no-repeat;
+			background-size: cover;
+			background-position-x: center;
+		}
+	}
+
+}

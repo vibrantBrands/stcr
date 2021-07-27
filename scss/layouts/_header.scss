@@ -1,0 +1,502 @@
+// Header styles fof the Vibrant rebrand //
+
+.header {
+	background: $black;
+	color: $white;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 100;
+
+	@include flex-col-layout();
+
+	@media only screen and (max-width: $xl-breakpoint) {
+		position: absolute;
+	}
+	@media only screen and (max-width: $sm-breakpoint) {
+		padding-top: 60px;
+	}
+
+	>div {
+		display: flex;
+		position: relative;
+
+		&:nth-child(2) {
+			align-items: flex-end;
+			flex-direction: column;
+			width: 70%;
+
+			@media only screen and (max-width: $xl-breakpoint) {
+				width: 80%;
+			}
+			@media only screen and (max-width: $lg-breakpoint) {
+				width: 100%;
+			}
+		}
+	}
+
+	.logo-box {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		padding-left: 5%;
+
+		@media only screen and (max-width: $lg-breakpoint) {
+			padding: 20px;
+			justify-content: flex-end;
+		}
+
+		@media only screen and (max-width: $sm-breakpoint) {
+			margin-top: 0px;
+		}
+
+		.tagline {
+			margin-left: 10px;
+			width: 250px;
+
+				@media only screen and (max-width: $sm-breakpoint) {
+					width: 200px;
+				}
+		}
+
+		p {
+			font-size: 1.2em;
+			line-height: 1.1em;
+			margin: 10px 0 0 20px;
+			min-width: 250px;
+		}
+
+		.logo {
+			max-width: 120px;
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				font-size: 16px;
+				max-width: 70px;
+			}
+		}
+	}
+
+	.ctas {
+		align-items: center;
+		display: flex;
+		margin-right: -10px;
+
+		@media only screen and (max-width: $lg-breakpoint) {
+			display: flex;
+			justify-content: space-around;
+			margin-right: 0;
+			width: 100%;
+		}
+
+		.phone {
+			color: $beige;
+			font-weight: bold;
+			font-size: 1.2em;
+			margin: 0px 20px 0 10px;
+			text-decoration: none;
+
+			&:hover {
+				color: $white;
+			}
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				position: absolute;
+				right: 0;
+				top: -35px;
+			}
+		}
+
+		p {
+			line-height: 1.2em;
+		}
+	}
+
+	.btn {
+		align-items: center;
+		background: #bdbdbd;
+		color: $black;
+		display: flex;
+		font-weight: bold;
+		justify-content: center;
+		max-height: 70px;
+		padding: 20px;
+		text-align: left;
+		text-decoration: none;
+
+		@media only screen and (max-width: $lg-breakpoint) {
+			min-height: 80px;
+			width: 50%;
+		}
+
+		.fas {
+			margin-right: 5px;
+		}
+
+		@media only screen and (max-width: $lg-breakpoint) {
+			transform: skewX(0deg);
+		}
+
+		@keyframes enlarge {
+		  0% {}
+		  100%  {background: $white;} 
+		}		
+
+		@keyframes rotate {
+		  0% {transform: rotate(0deg)}
+		  50%  {transform: rotate(-360deg)} 
+		  100%   {transform: rotate(-360deg);}
+		}
+
+		&:hover {
+
+			.fas {
+				animation: rotate .8s linear;
+				transform-origin: 50% 50%;
+			}
+		}
+
+		&.gray {
+			margin-top: -3px;
+
+			&:hover {
+				animation: enlarge .8s linear;
+				background: $white;
+				color: rgb(178,35,53);
+			}
+		}
+
+		&.red {
+			background: rgb(178,35,53);
+			color: $white;
+
+			&:hover {
+				animation: enlarge .8s linear;
+				background: $white;
+				color: $black;
+			}
+		}
+	}
+
+	.logo-box {
+		
+		p {
+			@media only screen and (max-width: $lg-breakpoint) {
+				display: none;
+			}
+		}
+	}
+
+	.navigation {
+		align-items: center;
+		display: flex;
+		font-size: 1em;
+		font-weight: normal;
+		justify-content: flex-end;
+		margin-left: -12px;
+		min-height: 80px;
+		padding: 30px 0;
+		position: sticky;
+		top: 150px;
+		text-transform: uppercase;
+		width: 100%;
+		z-index: 3;
+
+		@media only screen and (max-width: $nav-break) {
+			align-items: flex-end;
+			flex-direction: column;
+			justify-content: flex-end;
+		}
+
+		@media only screen and (max-width: $lg-breakpoint) {
+			min-height: 0;
+			padding: 0;
+
+			.nav {
+				margin-bottom: 0;
+			}
+		}
+
+		a {
+			color: #fff;
+
+			&:hover {
+				color: $nav-hover-color;
+			}
+		}
+
+		@media only screen and (max-width: $md-breakpoint) {
+			padding: 0;
+			justify-content: space-between;
+		}
+
+		>div {
+			display: flex;
+		}
+
+	.toggle-wrapper {
+			align-self: auto;
+			background: black;
+			border: 10px solid $black;
+			flex-direction: column;
+			height: 40px;
+			padding-bottom: 30px;
+			position: fixed;
+			top: 20px;
+			left: 20px;
+			z-index: 5;
+
+			@media only screen and (min-width: $md-breakpoint) {
+				display: none;
+			}	
+
+			p {
+				color: $white;
+				font-size: 0.6em;
+				margin: 25px 0 0 -1px;
+			}
+		}
+
+	.menu-toggle {
+			cursor: pointer;		
+
+			.bg {
+				display: block;
+				width: 90%;
+				height: 30px;
+				position: absolute;
+				
+			}
+
+			.bar {
+				background: $white;
+				display: block;
+				height: 2px;
+				position: absolute;
+				width: 100%;
+				top: 0;
+
+				&:nth-child(2){
+					top: 40%;
+				}
+				&:nth-child(3){
+					top: 60%;
+				}
+			}
+
+			&.active {
+
+				.bar {
+					//background: $white;
+					transition: $menu-transition;
+					
+					&:first-child {
+						transform: rotate(-45deg);
+						top: 40%;
+					}
+
+					&:nth-child(2) {
+						opacity: 0;
+					}
+
+					&:nth-child(3) {
+						transform: rotate(45deg);
+						top: 40%;
+					}
+				}
+			}
+
+			&.inactive {
+
+				.bar {
+					transition: $menu-transition;
+					
+					&:first-child {
+						transform: rotate(0);
+						top: 20%;
+					}
+
+					&:nth-child(2) {
+						opacity: 1;
+					}
+
+					&:nth-child(3) {
+						transform: rotate(0);
+						top: 60%;
+					}
+				}
+			}
+		}
+
+		.nav {
+            align-items: center;
+            display: flex;
+            justify-content: flex-end;
+            padding-left: 0;
+            text-align: right;
+            z-index: 10;
+
+            @media screen and (max-width: $xl-breakpoint) {
+                justify-content: center;
+            }
+
+             @media screen and (max-width: $lg-breakpoint) {
+                padding: 10px 0;
+                width: 100%;
+            }
+
+            @media screen and (max-width: $md-breakpoint) {
+                align-items: flex-end;
+                background: $black;
+                display: none;
+                font-size: 16px;
+                left: 0;
+                min-height: 1000px;
+                padding-top: 80px;
+                position: fixed;
+                top: 0px;
+                width: 100%;
+                z-index: 1;
+            }
+
+            @include flex-col-layout($md-breakpoint);
+
+            &.active {
+            	display: block;
+            }
+
+            >li {
+                color: $white;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                padding: 0 10px;
+                text-align: left;
+                text-decoration: none;
+
+                @media only screen and (max-width: $xl-breakpoint) {
+					font-size: 16px;
+				}
+				@media only screen and (max-width: $lg-breakpoint) {
+					font-size: 18px;
+				}
+
+                a {
+                	text-decoration: none;
+                }
+
+                >.submenu {
+                    max-height: 0;
+                    margin-top: -1px;
+                    overflow: hidden;
+                    padding: 0;
+                    position: absolute;
+                    top: 140px;
+                    transition: all .4s ease-out;
+                    z-index: 2;
+
+                    >.nav-item {
+                    	//background: $black;
+						/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#36a6dc+0,36a6dc+47,36a6dc+47,3667b1+47,3667b1+100 */
+						background: $black; /* Old browsers */
+						transition: all .2s ease-out;
+                    	border-top: 0;
+                    	border: $white 1px solid;
+                    	padding: 10px;
+                    	position: relative;
+
+                    	&:hover {
+                    		background: #edf6ff;
+
+                			a {
+                				color: $black;
+                				display: block;
+                				height: 100%;
+                				width: 100%;
+                			}
+                		}
+                    }
+
+                    .submenu {
+                    	display: none;
+                    	margin-bottom: 0;
+                    	margin-top: 10px;
+
+                    	.nav-item {
+                    		color: white;
+                    		margin-bottom: 0;
+                    		padding: 5px 0 5px 20px;
+                    		border: 0;
+
+                    		&:hover {
+                    			background: $black;
+                 				
+                 				a {
+                 					color: $black;
+                 				}
+                    		}
+                    	}
+                    }
+
+                    @media screen and (max-width: $md-breakpoint) {
+						max-width: 60%;
+						right: 0;
+						top: 0;
+
+						 >.nav-item {
+						 	border-top: 1px solid white;
+						 	border-left: 1px solid white;
+						 	margin-top: 0;
+						 	//padding: 0;
+
+						 	&:last-child {
+						 		border-bottom: 1px solid white;
+						 	}
+							
+							a {
+								//padding: 0 10px;
+							}
+
+						 }
+
+						 .submenu {
+						 	display: none;
+						 }
+                    }
+                }
+
+                &:hover {
+                    
+                    .submenu {
+                        max-height: 800px;
+                    }
+                }
+
+
+                @media screen and (max-width: $md-breakpoint) {
+                    background: $black;
+                    border-bottom: 1px solid white;
+                    font-size: 1.2em;
+                    height: auto;
+                    position: relative;
+                    margin: 0;
+                    text-align: left;
+                    width: 100%;
+
+                    a {
+                        align-items: center;
+                        color: white;
+                        display: flex;
+                        height: 60px;
+                        width: 100%;
+
+                        &:hover {
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+	}
+}

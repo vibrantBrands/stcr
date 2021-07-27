@@ -1,0 +1,288 @@
+.innovation {
+
+	@media only screen and (max-width: $sm-breakpoint) {
+		overflow-x: hidden;
+	}
+
+	.hero {
+		background: url('../img/innovation/background-image-0.jpg') no-repeat;
+		background-size: cover;
+
+		@media only screen and (max-width: $lg-breakpoint) {
+			padding-top: 110px;
+		}
+		@media only screen and (max-width: $md-breakpoint) {
+			padding-top: 70px;
+		}
+		@media only screen and (max-width: $sm-breakpoint) {
+			padding-top: 20px;
+		}
+	}
+
+	p {
+		text-align: left;
+	}
+	
+	.self-checkout {
+
+		.title {
+			text-align: justify;
+			width: 100%;
+		}
+
+		.kiosks {
+			background: url('../img/innovation/register-bg.jpg');
+			background-size: cover;
+			text-align: center;
+			width: 100%;
+
+			.kiosks-pic {
+				margin-top: -90px;
+				position: relative;
+				z-index: 5;
+			}
+		}
+
+		.complete {
+			position: absolute;
+			bottom: 0;
+		}
+
+		.tech-specs {
+			margin: 0 auto;
+			text-align: left;
+			width: 50%;
+
+			h3 {
+				font-size: 30px;
+			}
+		}
+	}
+
+	.heading-image {
+		background: $dark-gray;
+		padding: 40px 0;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.inner {
+		color: $white;
+		margin: 0px auto;
+		width: 70%;
+
+		&.black {
+			color: $black;
+		}
+
+		h3 {
+			font-size: 30px;
+			text-align: left;
+		}
+
+		.vivid-simple-accordion {
+			color: $black;
+			margin-top: 30px;
+			text-align: left;
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				margin-top: 0;
+			}
+		}
+	}
+
+	.two-column {
+
+		.panel-title {
+			margin: 0;
+		}
+
+		>div {
+			display: block;
+			position: relative;
+			text-align: center;
+			width: 50%;
+
+			@include mobile-full-width();
+
+			/*@media only screen and (max-width: $lg-breakpoint) {
+				min-height: 300px;
+			}*/
+
+			&.picture {
+				align-items: center;
+				background: url('../img/innovation/badger-bg.jpg') no-repeat;
+				//background-attachment: fixed;
+				background-position: left bottom;
+				background-size: cover;
+				display: flex;
+				justify-content: center;
+				padding: 50px 0;
+			}
+			&.text {
+				background: $black;
+
+
+				@media only screen and (min-width: 2000px) {
+					padding: 50px 0;
+				}
+
+				img {
+					width: 100%;
+				}
+			}
+		}
+
+		&.accordion {
+			>div {
+				margin-right: 1%;
+				width: 49%;
+			}
+		}
+
+		&.peripheral {
+
+			.slick-slider,
+			.slick-slide {
+				max-width: 400px;
+			}
+
+			.picture {
+				background: url('../img/innovation/peri-bg.jpg');
+				background-size: cover;
+				background-attachment: fixed;
+			}
+
+			.scroll-wrapper .slick-arrow:before {
+				color: $white;
+			}
+		}
+	}
+
+	.registers {
+		background-size: cover;
+		padding: 40px 0;
+
+		.picture {
+			background: url('../img/innovation/background-image-4.jpg');
+			background-attachment: fixed;
+			background-size: cover;
+			padding: 50px 0 0;
+		}
+	}
+
+	.software-solution {
+		position: relative;
+
+		.software-header {
+			position: relative;
+			margin-bottom: 50px;
+			z-index: 3;
+			width: 100%;
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				margin: 20px 0;
+			}
+		}
+
+		.background-text {
+			color: $lt-gray;
+			font-family: $secondary-font;
+			font-weight: bold;
+			font-size: 7em;
+			text-transform: uppercase;
+			position: absolute;
+			top: 8px;
+			z-index: -1;
+			width: 100%;
+
+			@include hide-mobile($lg-breakpoint);
+
+			>div {
+				position: absolute;
+			}
+
+			.reliability {
+				transform: rotate(-90deg);
+				transform-origin: 0% 100%;
+				top: 500px;
+				left: 100px;
+			}
+
+			.trusted {
+				top: 500px;
+				line-height: .6em;
+				left: 170px;
+			}
+
+			.support {
+				transform: rotate(90deg);
+				transform-origin: 100% 100%;
+				top: 500px;
+				right: 190px;
+				line-height: .65em;
+				text-align: left;
+			}
+		}
+
+		.inner {
+			color: $black;
+
+			.two-column {
+
+				>div {
+					//width: 47%;
+
+					@include mobile-full-width();
+				}
+			}
+		}
+	}
+
+	.label {
+
+		@media only screen and (max-width: $lg-breakpoint) {
+			flex-direction: column-reverse;
+		}
+		.picture {
+			background: url('../img/innovation/background-image-6.jpg') no-repeat !important;
+			background-attachment: fixed !important;
+			background-size: cover !important;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	}
+
+	.scroll-wrapper {
+		display: flex;
+		justify-content: center;
+		//margin-top: 30px;
+		width: 100%;
+
+		.slick-slider,
+		.slick-slide {
+			height: auto;
+			max-width: 800px;
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				
+				max-width: 400px;
+			}
+			@media only screen and (max-width: $sm-breakpoint) {
+				height: auto;
+				max-width: 250px;
+			}
+		}
+
+		.slick-arrow {
+			
+
+			&:before {
+				color: gray;
+			}
+		}
+	}
+}

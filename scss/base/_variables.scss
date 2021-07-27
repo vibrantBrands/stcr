@@ -1,0 +1,45 @@
+
+
+// Fonts
+$base-font: "Arial", sans-serif;
+$secondary-font: 'Prompt', sans-serif;
+$font-stack-system: $base-font;
+
+// Colors 
+
+$black: #000;
+$white: #fff;
+$orange: #ffa42f;
+$red: #b22335;
+$dark-blue: #2b3b51;
+$gray: #c7c7c7;
+$dark-gray: darken($gray, 5%);
+$lt-gray: #f1f1f1;
+$footer-bg: #14191f;
+$beige: #D6C4A5;
+$nav-hover-color: $beige;
+
+// Menu 
+
+$menu-transition: all .5s ease-out;
+
+// Breakpoints
+
+$sm-breakpoint: 576px;
+$md-breakpoint: 768px;
+$lg-breakpoint: 992px;
+$xl-breakpoint: 1200px;
+$nav-break: 1500px;
+
+// Sizes 
+
+$content-max-width: 1300px;
+
+$topbar-height: 50px;
+$topbar-mobile-height: 90px;
+
+
+// Margins
+
+$header-top-margin: 70px;
+$h2-top-margin: 25px;

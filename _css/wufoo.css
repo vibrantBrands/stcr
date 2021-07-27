@@ -1,0 +1,54 @@
+
+html.embed {
+	background: black;
+	font-family: "Prompt", sans-serif;
+	padding: 10px 40px !important;
+}
+
+.wufoo .info h2 {
+	color: white !important;
+	margin-top: 20px;
+	font-family: "Prompt", sans-serif;
+	text-transform: uppercase;
+}
+
+.confirm .wufoo {
+	text-align: left;
+}
+
+.confirm h2 {
+	font-size: 14px;
+	color: white;
+	margin: 0;
+	padding: 30px 0;
+}
+
+.wufoo label, .wufoo label.desc, .wufoo legend.desc, .likert caption {
+	font-family: "Prompt", sans-serif;
+	color: #ffffff !important;
+	text-transform: uppercase;
+}
+
+.wufoo input.text, .wufoo textarea.textarea, .wufoo input.file, .wufoo select.select, .wufoo li .wufoo-dropdown span {
+	padding-top: 7px !important;
+	padding-bottom: 7px !important;
+}
+
+.wufoo li.focused {
+	background: none !important;
+	border: 1px solid #fff !important;
+}
+
+#saveForm {
+	background: #b22335;
+	border: none !important;
+	font-family: "Prompt", sans-serif;
+	font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 5px 75px !important;
+    text-transform: uppercase;
+}
+
+

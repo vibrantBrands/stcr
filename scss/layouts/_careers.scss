@@ -1,0 +1,112 @@
+.page-template-careers {
+	background: url('../img/careers-page-bg.png');
+	background-size: cover;
+
+	.hero {
+		background: url('../img/careers-bg.png');
+		background-size: cover;
+	}
+
+	.vivid-simple-accordion {
+		margin: 30px;
+	}
+
+	h1 {
+		@media only screen and (max-width: $md-breakpoint) {
+			font-size: 30px;
+			word-wrap: word-break;
+		}
+	}
+
+	.career-listings {
+		display: flex;
+		justify-content: center;
+
+		@include flex-col-layout();
+
+
+		.list {
+			width: 50%;
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				width: 100%;
+			}
+
+			>div {
+				background: $lt-gray;
+				border-bottom: 1px solid $white;
+				color: $black;
+				cursor: pointer;
+				line-height: 1.3em;
+				padding: 20px;
+
+				@media only screen and (max-width: $lg-breakpoint) {
+					padding: 5px 20px;
+				}
+
+				&:hover {
+					background: #ccc;
+				}
+
+				&.active {
+					background: $red;
+					color: $white;
+				}
+			}
+
+		}
+		.descriptions {
+			background: $white;
+			padding-bottom: 50px;
+			width: 50%;
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				width: 100%;
+			}
+
+			h1,h2,h3,p {
+				padding: 0 60px;
+				text-align: left;
+			}
+
+			ul {
+				padding: 0 60px 0 80px;
+			}
+
+			h1 {
+				margin-top: 30px;
+
+				@media only screen and (max-width: $lg-breakpoint) {
+					text-align: left;
+				}
+			}
+
+			table {
+				margin: 0 0 0 60px;
+				width: 80%;
+			}
+
+			.btn {
+				margin: 0 0 30px 30px;
+			}
+
+			.panel-title {
+				padding: 0;
+			}
+
+			>div {
+				display: none;
+
+				&:first-child {
+					display: block;
+				}
+			}
+
+			.simple-accordion-description {
+				p {
+					padding: 0;
+				}
+			}
+		}
+	}
+}

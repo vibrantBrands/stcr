@@ -1,0 +1,301 @@
+
+.homepage {
+	background: $black;
+	text-align: center;
+
+	h1 {
+		font-size: 45px;
+	}
+
+	h2 {
+		font-size: 38px;
+
+		&.gray {
+			color: $gray;
+		}
+	}
+
+	.hero {
+		background: none;
+		min-height: 700px;
+
+		label {
+			position: absolute;
+			left: -9999px;
+		}
+
+		@media only screen and (max-width: $lg-breakpoint) {
+			background: url('../img/hero-mobile.png');
+			background-size: cover;
+			padding-top: 240px;
+			min-height: 380px;
+		}
+	}
+
+	.news-wrapper {
+		background: $beige;
+		padding: 25px 0;
+		width: 100%;
+
+		.news {
+			background: url('../img/news-bg.png');
+			background-size: cover;
+			border-bottom: 10px solid $black;
+			border-top: 10px solid $black;
+			padding: 50px 0;
+			width: 100%;
+
+			h2, h3 {
+				color: $black;
+				text-align: left;
+			}
+
+			h3 {
+				margin: 5px 0;
+			}
+
+			.container {
+				padding: 0 5%;
+				width: 100%;
+
+				.ccm-block-page-list-wrapper {
+					width: 100%;
+				}
+
+				.ccm-block-page-list-pages {
+					align-items: center;
+					display: flex;
+					-ms-flex: 1 0 0;
+
+					@media screen and (max-width: $lg-breakpoint) {
+						flex-direction: column;
+		        	}
+
+		        	.ccm-block-page-list-page-entry-horizontal {
+		        		width: 50%;
+
+		        		@media screen and (max-width: $lg-breakpoint) {
+							display: flex;
+							-ms-flex: 1 0 0;
+							flex-direction: column;
+							width: 100%;
+			        	}
+		        	}
+
+					.ccm-block-page-list-page-entry-thumbnail {
+
+						img {
+							margin-top: 15px;
+							min-width: 200px;
+						}
+					}
+
+					.ccm-block-page-list-description {
+						line-height: 1.4em;
+					}
+				}
+
+				.news-article {
+					display: flex;
+					-ms-flex: 1 0 0;
+					margin: 30px 0 50px;
+
+					@include flex-col-layout($md-breakpoint);
+
+
+					>div {
+
+						&:nth-child(2) {
+							padding-right: 8%;
+						}
+					}
+
+					h3 {
+						@media screen and (max-width: $lg-breakpoint) {
+							margin-top: 40px;
+		        		}
+					}
+				}
+
+				img {
+					max-width: 200px;
+					margin: 0 20px 0 0;
+				}
+
+				p {
+					color: $black;
+				}
+
+				a {
+					display: block;
+					font-size: 20px;
+					color: $red;
+					text-transform: uppercase;
+					text-decoration: none;
+
+					@media screen and (max-width: $lg-breakpoint) {
+						top: auto;
+            			bottom: 0;
+            			right: 5%;
+        			}
+
+					.fas {
+						margin-left: 6px;
+					}
+
+					&.clearfix {
+						position: absolute;
+						right: 20px;
+					}
+				}
+			}
+		}
+	}
+
+	.get-started {
+		color: $white;
+
+		h1 {
+			margin-bottom: 30px;
+			text-align: center;
+		}
+
+		h2 {
+			color: $white;
+			font-weight: 100;
+			margin-top: 0;
+		}
+
+		.phone {
+			color: $red;
+			font-size: 40px;
+			text-align: center;
+
+			a {
+				color: $red;
+				text-decoration: none;
+			}
+		}
+	}
+
+	.dedicated {
+		overflow-x: hidden;
+		padding-top: 0;
+		
+		.image-row {
+			display: flex;
+			-ms-flex: 1 0 0;
+			margin-top: 0;
+			padding-top: 0;
+
+			@media screen and (max-width: $lg-breakpoint) {
+				flex-direction: column;				
+        	}
+
+			h3 {
+				background: $black;
+				color: $white;
+				font-size: 1.2em;
+				margin-top: 0;
+				padding: 10px 0;
+			}
+
+			>div {
+				display: block;
+				height: 380px;
+				width: 100%;
+
+				&:first-child {
+					background: url('../img/tech-bg1.png') no-repeat;
+					background-size: cover;
+				}
+				&:nth-child(2) {
+					background: url('../img/tech-bg2.png') no-repeat;
+					background-size: cover;
+				}
+				&:nth-child(3) {
+					background: url('../img/tech-bg3.png') no-repeat;
+					background-size: cover;
+				}
+
+				img {
+					//margin-top: -40px;
+
+					@media screen and (max-width: $lg-breakpoint) {
+						//margin-top: -40px;
+						max-width: 500px;			
+        			}
+        			@media screen and (max-width: $sm-breakpoint) {
+						//margin-top: -40px;
+						max-width: 400px;			
+        			}
+        			@media screen and (min-width: 1500px) {
+						max-width: 500px;			
+        			}
+
+
+	        		&.aos-animate {
+	        			transform: scale(1);
+	        			transition: 3s transform ease-out;
+	        		}
+				}
+			}
+		}
+
+		.redbar {
+			display: block;
+			background: $red;
+			color: $white;
+			padding: 20px;
+			position: relative;
+			width: 100%;
+			text-transform: uppercase;
+			font-size: 1.5em;
+			z-index: 2;
+		}
+	}
+
+	.customer-profiles {
+		overflow-x: hidden;
+		width: 100%;
+
+		h2 {
+			margin: 30px auto;
+		}
+
+		.image-row {
+			width: 100%;
+
+			.images {
+				width: 100%;
+
+				>div {
+					margin: 0 20px;
+					position: relative;
+					width: 90%;
+
+					a {
+						display: block;
+						position: relative;
+						text-decoration: none;
+						height: 100%;
+						width: 100%;
+
+						&:hover {
+							.play {
+								transform: scale(1.2);
+								transition: transform .3s ease-out;
+							}
+						}
+
+						.play {
+							position: absolute;
+							right: 5%;
+							top: 50%;
+						}
+					}
+				}
+			}
+		}
+	}
+}

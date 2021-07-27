@@ -1,0 +1,433 @@
+
+body {
+	font-size: 16px;
+	overflow-x: hidden;
+	text-align: center;
+
+	/** {
+		border: 1px solid red;
+	}*/
+}
+
+h1, h2, h3, h4 {
+	color: $red;
+	font-family: $secondary-font;
+	font-weight: bold;
+	margin: 20px 0 8px;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h1 {
+	font-size: 30px;
+	text-align: left;
+	line-height: 1em;
+}
+
+h2 {
+	font-size: 26px;
+
+	&.gray {
+		color: $gray;
+	}
+}
+
+
+h2.panel-title {
+	background: none;
+	font-size: 22px;
+	text-transform: none;
+}
+
+h3 {
+	font-size: 24px;
+}
+
+a.btn {
+	background: $red;
+	color: $white;
+	display: inline-block;
+	padding: 10px 25px;
+}
+
+.ccm-block-page-list-title {
+	font-size: 20px;
+	color: $black;
+	text-transform: none;
+
+	a {
+		color: $red;
+		font-family: $secondary-font;
+		font-weight: bold;
+		text-decoration: none;
+	}
+}
+
+.ccm-block-page-list-title {
+	margin: 15px 0 10px;
+}
+
+.ccm-block-page-list-page-entry {
+	margin-top: 50px;
+}
+
+p,
+ul,
+.ccm-block-page-list-description {
+	font-family: $secondary-font;
+	font-size: 18px;
+	font-weight: normal;
+	line-height: 1.8em;
+	margin-bottom: 20px;
+}
+
+.simple-accordion-title-shell {
+	background: #e0e0e0 !important;
+	padding: 10px !important;
+}
+
+.simple-accordion-group .simple-accordion-description {
+	background: #f1f1f1 !important;
+}
+
+p {
+	margin: 10px 0;
+}
+
+ul {
+	list-style-type: disc;
+	padding-left: 25px;
+}
+
+a {
+	font-weight: bold
+}
+
+.red {
+	color: $red;
+}
+
+.btn {
+	background: $red;
+	color: $white;
+	display: inline-block;
+	padding: 20px;
+	text-decoration: none;
+
+	a {
+		color: $white;
+		text-decoration: none;
+	}
+}
+
+
+.container {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	max-width: $content-max-width;
+	padding: 50px 5%;
+	position: relative;
+	text-align: left;
+
+	&.narrow {
+		max-width: 800px;
+		padding: 50px 20px;
+	}
+
+	img {
+		align-self: center;
+
+		@media only screen and (max-width: $lg-breakpoint) {
+			width: 100%;
+		}
+
+	}
+}
+
+.two-col,
+.two-column {
+	display: flex;
+	justify-content: space-between;
+
+	>div {
+		margin-right: 1%;
+		width: 49%;
+	}
+
+	@include flex-col-layout();
+
+	h2 {
+		margin-top: 50px;
+	}
+
+	>div {
+		margin: 0 auto;
+
+		@include mobile-full-width();
+	}
+
+	span {
+		display: flex;
+	}
+}
+
+.image-row {
+	background: $black;
+	padding: 40px 0 0;
+	text-align: center;
+
+	a {
+		cursor: pointer;
+	}
+
+	@media only screen and (max-width: $md-breakpoint) {
+		//width: 70%;
+	}
+
+	h3 {
+		font-size: 20px;
+		color: $red;
+		text-transform: uppercase;
+		margin: 30px 0;
+	}
+
+	.container {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.icons {
+		align-items: center;
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 40px;
+
+		@include flex-col-layout();
+
+		div {
+			align-items: center;
+			align-self: center;
+			border-left: 1px solid white;
+			display: flex;
+			flex-direction: column;
+			padding: 0 20px;
+			width: 100%;
+
+			&:first-child {
+				border: none;
+			}
+
+			@media only screen and (max-width: $lg-breakpoint) {
+				border: 0;
+			}
+		}
+
+		img {
+			align-self: center;
+			margin: 0 10px;
+			max-height: 130px;
+			width: auto;
+		}
+		p {
+			color: $red;
+			font-size: 1.2em;
+			margin-top: 20px;
+		}
+	}
+
+	.play {
+		bottom: 120px;
+		left: 50px;
+		max-width: 50px;
+		opacity: .7;
+		position: absolute;
+	}
+
+	.images {
+		display: flex;
+		justify-content: space-between;
+
+		@include flex-col-layout($md-breakpoint);
+
+		>a {
+			margin: 0 30px;
+			position: relative;
+			text-decoration: none;
+
+			&:hover {
+
+				h3 {
+					color: $beige;
+					transition: color .5s ease-out;
+				}
+
+				.play {
+					transform: scale(1.2, 1.2);
+					transition: .4s all ease-out;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	.clearfix {
+		clear: both;
+	}
+}
+
+.row {
+	align-items: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+
+	@include flex-col-layout();
+}
+
+.hero {
+	align-items: center;
+	background: #B22336;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	padding-top: 90px;
+	min-height: 300px;
+	overflow: hidden;
+	position: relative;
+	text-align: left;
+	z-index: 3;
+	width: 100%;
+
+	@media screen and (max-width: $lg-breakpoint) {
+       padding-top: 130px;
+    }
+    @media screen and (max-width: $md-breakpoint) {
+        min-height: 250px;
+    }
+
+    h1, h2 {
+		line-height: 1em;
+		font-family: $secondary-font;
+    	font-size: 45px;
+		text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.8);
+
+		@media screen and (max-width: $lg-breakpoint) {
+        	font-size: 35px;
+    	}
+    }
+
+
+	h1 {
+		color: $white;
+		font-size: 5em;
+		font-weight: bold;
+		margin-top: 0px;
+		text-align: center;
+		text-transform: uppercase;
+
+		@media screen and (max-width: $md-breakpoint) {
+        	margin-top: 0px;
+    	}
+	}
+
+
+	h2 {
+		color: $beige;
+		font-weight: bold;
+		margin-top: 10px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.hero-slider {
+		display: none;
+		//margin-left: 80px;
+		width: 655px;
+		z-index: 2;
+
+		&.reveal {
+			display: block;
+		}
+
+		@media screen and (max-width: $lg-breakpoint) {
+        	width: 500px;
+        	margin-left: 50px;
+    	}
+    	@media screen and (max-width: $sm-breakpoint) {
+	        width: 380px;
+	        margin-left: 30px;
+	    }
+		.overlay-text {
+			width: 700px;
+
+			h1, h2 {
+				@media screen and (max-width: $sm-breakpoint) {
+		        	font-size: 28px;
+		    	}
+			}
+
+			@media screen and (max-width: $lg-breakpoint) {
+	        	width: 500px;
+	    	}
+	    	@media screen and (max-width: $sm-breakpoint) {
+	        	width: 380px;
+	    	}
+	    	
+		}
+	}
+
+	video {
+		position: absolute;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+
+		/*@media screen and (max-width: $lg-breakpoint) {
+			display: none;
+		}*/
+
+		/*@media screen and (max-width: $md-breakpoint) {
+			margin-top: -85px;
+		}*/
+	}
+}
+
+.gray-bg {
+	color: $white;
+	background: $dark-gray;
+
+	.container {
+		padding: 50px 10%;
+
+		&.narrow {
+			padding: 50px 20px;
+		}
+	}
+}
+
+#wufoo-m1imex5b1h2h1cb,
+#wufoo-k1uplbvu09vxeh4,
+#wufoo-pyn3zzd0dqjoc4  {
+	background: black !important;
+	padding-bottom: 40px !important;
+}
+
+#central {
+	margin-top: 200px;
+
+	#body {
+		text-align: center;
+
+		.ccm-page-list {
+			margin: 0 auto;
+			max-width: 1200px;
+			text-align: left;
+
+			h3 {
+				text-align: left;
+			}
+		}
+	}
+}
+
